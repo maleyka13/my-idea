@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+header {
+  background-image: url("../img/pr.avif");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  z-index: 0;
+  padding: 15px;
+  position: relative;
+}
+header .hover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgba(23, 48, 84, 0.5);
+}
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+/* navbar start */
+.container .header-container nav {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Saira Semi Condensed", sans-serif;
+  /* position: fixed; */
+}
+.container .header-container nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.container .header-container nav .logo i.student-cap {
+  font-size: 30px;
+  transform: rotate(-30deg);
+}
+.container .header-container nav .logo h1 {
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+.container .header-container nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.container .header-container nav ul li a {
+  font-size: 23px;
+  padding: 6px;
+  transition: 0.5s;
+}
+.container .header-container nav ul li a:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 25px;
+}
+/* navbar end */
+
+/* header-content start */
+
+.container .header-container .header-content {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  row-gap: 30px;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Saira Semi Condensed", sans-serif;
+}
+.container .header-container .header-content h1 {
+  font-size: 56px;
+  letter-spacing: 2px;
+}
+.container .header-container .header-content p {
+  font-size: 22px;
+}
+.container .header-container .header-content .header-btn .more-btn {
+  padding: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: transparent;
+  font-size: 22px;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+/* header-content end */
+
+/* course section start */
+#courses {
+  padding: 15px;
+  width: 100%;
+  /* height: 100vh; */
+  font-family: "Saira Semi Condensed", sans-serif;
+}
+#courses .container .card-box {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  column-gap: 100px;
+  margin-top: 100px;
+}
+#courses .container .card-box .card {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  max-width: 330px;
+  width: 100%;
+}
+
+#courses .container .card-box .card .card-img .img {
+  width: 100%;
+  height: 100%;
+}
+#courses .container .card-box .card .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  padding-top: 20px;
+  color: #183153;
+}
+#courses .container .card-box .card .card-content .course-name {
+  font-size: 38px;
+  font-weight: 700;
+  color: #183153;
+}
+#courses .container .card-box .card .card-content .pay,
+.duration {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+}
+
+#courses .container .card-box .card .card-content .card-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 35px;
+  border: none;
+  background-color: #183153;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 700;
+}
+/* course section end */
+
+#blog {
+  padding: 15px;
+  width: 100%;
+  height: 100hv;
+}
+/* footer start */
+/* .parent{
+    position: relative;
+} */
+#footer {
+  width: 100%;
+  height: 30vh;
+  background-color: #183153;
+  position: relative;
+  bottom: 0;
+}
+#footer .container .copy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 100px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 22px;
+  font-weight: 700;
+}
+/* footer end */
+
+@media screen and (max-width: 768px) {
+  #courses .container .card-box .card {
+    max-width: 200px;
+  }
+  #courses .container .card-box .card .card-content {
+    row-gap: 10px;
+  }
+  #courses .container .card-box .card .card-content .course-name {
+    font-size: 24px;
+  }
+  #courses .container .card-box .card .card-content .card-btn {
+    padding: 8px;
+    margin-top: 15px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  #courses .container .card-box {
+    grid-template-columns: auto;
+    row-gap: 40px;
+  }
+}
